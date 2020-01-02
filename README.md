@@ -20,7 +20,7 @@ jobs:
       with:
         node-version: '10.x'
     - run: for d in */ ; do cd $d && npm install --no-package-lock --loglevel=error && cd .. ; done
-    - uses: r0zar/sam-deploy-action@v1.0
+    - uses: moe-mahdiani/sam-deploy-action@v1.0
       env:
         TEMPLATE: 'template.yaml'
         AWS_STACK_NAME: prod-${{ github.actor }}-resourceful
