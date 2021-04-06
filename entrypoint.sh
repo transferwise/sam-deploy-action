@@ -82,5 +82,5 @@ output = text
 region = $AWS_REGION" > ~/.aws/config
 
 cd okta-workday/sam-app
-sam build
+sam build --use-container
 sam deploy --template-file $TEMPLATE --region $AWS_REGION --stack-name $AWS_STACK_NAME --s3-bucket $AWS_DEPLOY_BUCKET $AWS_BUCKET_PREFIX $AWS_SIGNING_PROFILES $CAPABILITIES $FORCE_UPLOAD
