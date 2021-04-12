@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM debian
 
 LABEL version="1.0.0"
 
